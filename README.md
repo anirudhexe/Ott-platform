@@ -3,4 +3,4 @@
 install dependencies:
 npm i
 
-npm start to run 
+run: npm run start
