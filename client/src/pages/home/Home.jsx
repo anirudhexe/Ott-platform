@@ -4,12 +4,12 @@ import Navbar from '../../components/navbar/Navbar';
 import List from '../../components/list/List';
 import Featured from '../../components/featured/Featured';
 
-const Home = () => {
+const Home = ({type}) => {
   return (
     <div className='home'>
         <Navbar/>
         
-        <Featured/>
+        <Featured type={type}/>
         <List/>
         <List/>
         <List/>
