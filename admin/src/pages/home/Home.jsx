@@ -35,7 +35,7 @@ export default function Home() {
         const res = await axios.get("/users/stats", {
           headers: {
             token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZTZmYzQ2NDk0Mjc3MTYwNDg4MmMxNiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYyNTgzMjMxMSwiZXhwIjoxNjI2MjY0MzExfQ.ATXV-1TTWIGyVBttTQSf0erRWjsgZ8jHQv1ZsUixbng",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTk5OTI0ZTcxM2YxOTU1MDJiYjlkOSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcxMzY0MTQ4OSwiZXhwIjoxNzE0MDczNDg5fQ.pYxZOU-LljhfyrTZWWZdkicueb53u5Y3YTm5AZxZEvw",
           },
         });
         //sort hoing
@@ -48,6 +48,7 @@ export default function Home() {
             { name: MONTHS[item._id - 1], "New User": item.total },
           ])
         );
+        console.log(userStats);
       } catch (err) {
         console.log(err);
       }
@@ -59,7 +60,7 @@ export default function Home() {
     //replace userData with userStats and datakey=new user
     <div className="home">
       <FeaturedInfo />
-      <Chart data={userData} title="User Analytics" grid dataKey="Active User"/> 
+      <Chart data={userStats} title="User Analytics" grid dataKey="New User"/> 
       <div className="homeWidgets">
         <WidgetSm/>
         <WidgetLg/>

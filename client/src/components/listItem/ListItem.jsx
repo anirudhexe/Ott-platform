@@ -20,6 +20,7 @@ const ListItem = ({index, item}) => {
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjE3YTgzODJhYmZjMThhMTllY2U0YSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MTM0NzIxNjEsImV4cCI6MTcxMzkwNDE2MX0.TBCYkr1M51b4-wHtcGYFr_PNC6sSvWl9cZX2rHH7j5A",
             },
           });
+          console.log(res.data)
           setMovie(res.data);
         } catch (err) {
           console.log(err);
@@ -29,7 +30,7 @@ const ListItem = ({index, item}) => {
     }, [item]);
   
     return (
-      <Link to={{pathname:'/watch',movie:movie}}>
+      <Link to={{pathname:'/watch', state:{movie: movie} }}>
       <div
         className="listItem"
         style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
