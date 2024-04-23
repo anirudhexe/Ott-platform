@@ -21,6 +21,7 @@ const ListItem = ({index, item}) => {
             },
           });
           console.log(res.data)
+          console.log(item);
           setMovie(res.data);
         } catch (err) {
           console.log(err);
@@ -28,9 +29,11 @@ const ListItem = ({index, item}) => {
       };
       getMovie();
     }, [item]);
-  
+    
+    const movieParam = encodeURIComponent(item);
     return (
-      <Link to={{pathname:'/watch', state:{movie: movie} }}>
+      // <Link to={`/watch?movie=${movieParam}`}>
+      <Link to="/watch" state={{movie}}>
       <div
         className="listItem"
         style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
