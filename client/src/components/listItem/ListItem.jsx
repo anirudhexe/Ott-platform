@@ -17,7 +17,7 @@ const ListItem = ({index, item}) => {
           const res = await axios.get("/movies/find/" + item, {
             headers: {
               token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjE3YTgzODJhYmZjMThhMTllY2U0YSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MTM0NzIxNjEsImV4cCI6MTcxMzkwNDE2MX0.TBCYkr1M51b4-wHtcGYFr_PNC6sSvWl9cZX2rHH7j5A",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2Mjk3YmZlNTAyNWQ1MjU0MjFkNDg1YiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MTM5OTQ3NjUsImV4cCI6MTcxNDQyNjc2NX0.D3fY-EW_69kw8nQcRegghCoYcRyAqa7E1O_4iKW_qyU",
             },
           });
           console.log(res.data)
@@ -30,9 +30,7 @@ const ListItem = ({index, item}) => {
       getMovie();
     }, [item]);
     
-    const movieParam = encodeURIComponent(item);
     return (
-      // <Link to={`/watch?movie=${movieParam}`}>
       <Link to="/watch" state={{movie}}>
       <div
         className="listItem"
