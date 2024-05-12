@@ -5,10 +5,11 @@
     position: fixed;
     top: 0;
     z-index: 999;
-    background: black;
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.7) 50%);
   
     &.scrolled{
       background-color: var(--main-color);
+
     }
   
     .container {
@@ -55,6 +56,12 @@
             display: none;
             background-color: var(--main-color);
             border-radius: 5px;
+          }
+          button{
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
           }
   
           span {

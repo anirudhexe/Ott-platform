@@ -6,10 +6,18 @@
         to bottom,
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 1) 100%
-      ),
-      url("https://images4.alphacoders.com/134/1347180.png");
+      );
+      
     background-size: cover;
     position: relative;
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: -20;
+      width: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
   
     .top {
       .wrapper {

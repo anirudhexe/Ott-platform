@@ -1,0 +1,105 @@
+
+.register {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+  );
+
+  #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: -100;
+      width: 100%;
+      z-index: -1;
+      object-fit: cover;
+  }
+
+  .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: transparent; /* Set your desired background color */
+  }
+
+  .header .logo {
+      height: 40px; /* Adjust the logo height as needed */
+  }
+
+  
+  
+  
+  /* CSS */
+  .container .box {
+    color: white;
+    background: red;
+    padding: 10px 24px;
+    position: relative;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 5px 10px 10px rgba(255, 0, 0, 0.653);
+    cursor: pointer;
+  }
+
+  .container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+  }
+
+  .container h1 {
+      font-size: 50px;
+  }
+
+  .container h2 {
+      margin: 20px;
+  }
+
+  .container p {
+      font-size: 20px;
+  }
+
+  .container .loginPrompt{
+    font-size: 20px;
+    margin: 20px;
+}
+
+  .container .input {
+      width: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      height: 50px;
+      border-radius: 5px;
+  }
+
+  .container .input input {
+      flex: 9;
+      height: 100%;
+      border: none;
+      padding: 0 10px;
+  }
+
+  .container .input .registerButton {
+      flex: 3;
+      height: 100%;
+      background-color: red;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+  }
+}
+
