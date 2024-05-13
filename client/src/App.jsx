@@ -3,6 +3,7 @@ import Home from './pages/home/Home';
 import Register from './pages/register/Register';
 import Watch from './pages/watch/Watch';
 import Login from './pages/login/Login';
+import Subscription from './pages/subscription/Subscription'
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,6 +25,9 @@ function App() {
         <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />}/>
         {user && (
           <>
+
+            <Route path="/subscription" element={<Subscription />}/>
+
             <Route path="/movies" element={<Home type="movie" />}/>
         
             <Route path="/series" element={<Home type="series" />}/>

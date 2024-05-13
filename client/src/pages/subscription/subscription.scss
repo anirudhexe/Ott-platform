@@ -1,0 +1,57 @@
+.subscription-plan-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    h1 {
+      text-align: center;
+    }
+  
+    .plans-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+  
+      .plan {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        width: 30%;
+  
+        h2 {
+          text-align: center;
+        }
+  
+        p {
+          font-size: 1.2em;
+          text-align: center;
+        }
+  
+        ul {
+          margin-top: 20px;
+          padding-left: 20px;
+  
+          li {
+            margin-bottom: 10px;
+          }
+        }
+  
+        button {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  }
+  
