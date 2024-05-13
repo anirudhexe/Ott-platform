@@ -6,6 +6,7 @@ import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import { useState,useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png" 
 
 const ListItem = ({index, item}) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -38,10 +39,11 @@ const ListItem = ({index, item}) => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <img
+        {content ? <img
           src={content.img}
           alt=""
-        />
+        /> : <img src={logo} alt="Description of the image" />
+      }
         {isHovered && (
           <>
             <video src={content.trailer} autoPlay={true} loop />

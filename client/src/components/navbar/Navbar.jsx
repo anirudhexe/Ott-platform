@@ -39,7 +39,9 @@ const Navbar = () => {
         <div className="right">
           <SearchIcon className="icon" />
           
-          <AccountCircleIcon className="icon"/>
+          <Link to="/subscription" className="icon-link">
+            <AccountCircleIcon className="icon" />
+          </Link>
 
           <div className="profile">
             <button onClick={()=>dispatch(logout())}><PowerSettingsNewIcon style={{margin:'0 12 0'}} /></button>
