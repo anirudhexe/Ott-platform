@@ -1,3 +1,4 @@
+
 .subscription-plan-page {
     max-width: 800px;
     margin: 0 auto;
@@ -11,12 +12,14 @@
       display: flex;
       justify-content: space-between;
       margin-top: 30px;
+      
   
       .plan {
         border: 1px solid #ccc;
         border-radius: 8px;
         padding: 20px;
         width: 30%;
+        margin-right: 20px;
   
         h2 {
           text-align: center;

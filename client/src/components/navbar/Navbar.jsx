@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="right">
           <SearchIcon className="icon" />
           
-          <Link to="/subscription" className="icon-link">
+          <Link to="/subscription" className="icon">
             <AccountCircleIcon className="icon" />
           </Link>
 

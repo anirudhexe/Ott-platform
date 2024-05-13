@@ -3,7 +3,8 @@ import './subscription.scss'; // Import SCSS file for styling
 
 function Subscription() {
   return (
-    <div className="subscription-plan-page">
+    <div className="subPage">
+      <div className="subscription-plan-page">
       <h1>Choose a Subscription Plan</h1>
       <div className="plans-container">
         <div className="plan">
@@ -38,6 +39,8 @@ function Subscription() {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 }
 

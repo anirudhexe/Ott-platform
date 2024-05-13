@@ -48,17 +48,18 @@ const Featured = ({type, setGenre}) => {
           </select>
         </div>
       )}
-      <img
+      {/* <img
         src={content.img}
         alt=""
-      />
+      /> */}
+      <video src={content.trailer} autoPlay={true} loop muted/>
       <div className="info">
         <img
           src={content.imgTitle}
           alt=""
         />
         <span className="desc">
-          {content.desc}
+          {content.title}
         </span>
         <div className="buttons">
         <Link to="/watch" state={{content}}>
