@@ -1,11 +1,10 @@
 import "./sidebar.css";
+import ListIcon from '@mui/icons-material/List';
 import {
   LineStyle,
   Timeline,
   TrendingUp,
   PermIdentity,
-  Storefront,
-  AttachMoney,
   BarChart,
   MailOutline,
   DynamicFeed,
@@ -54,10 +53,12 @@ export default function Sidebar() {
                 Movies
               </li>
             </Link>
+            <Link to="/lists" className="link">
             <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
+              <ListIcon className="sidebarIcon" />
+              Lists
             </li>
+            </Link>
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
               Reports

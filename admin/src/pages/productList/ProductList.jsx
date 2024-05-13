@@ -1,7 +1,6 @@
 import "./productList.css";
 import { DataGrid } from '@mui/x-data-grid';
 import { DeleteOutline } from "@mui/icons-material";
-import { productRows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import {MovieContext} from '../../context/movieContext/MovieContext';
