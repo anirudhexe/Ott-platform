@@ -11,6 +11,8 @@ import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Login from "./pages/login/Login";
 import { Navigate } from 'react-router-dom';
+import { useContext } from "react";
+import { AuthContext } from "./context/authContext/AuthContext";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -21,7 +23,6 @@ function App() {
       <Sidebar />
         <Routes>
           <Route exact path="/" element={<Home />}/>
-          {/* <Route path="/login" element={<Login />}/> */}
           <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
           <Route path="/users" element={<UserList />}/>
           <Route path="/user/:userId" element={<User />}/>
