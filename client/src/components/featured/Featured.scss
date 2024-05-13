@@ -60,10 +60,12 @@
           font-weight: 500;
           margin-right: 10px;
           cursor: pointer;
+          
   
           &.play {
             background-color: white;
             color: var(--main-color);
+            
           }
   
           &.more {
@@ -73,6 +75,7 @@
   
           span {
             margin-left: 5px;
+            text-decoration: none;
           }
         }
       }

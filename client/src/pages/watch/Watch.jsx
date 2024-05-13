@@ -5,9 +5,9 @@ import { useLocation, Link } from "react-router-dom";
 export default function Watch() {
   const location = useLocation();
   console.log(location.state);
-  const { movie } = location.state;
-  console.log(`this is movie ${movie}`);
-  const isExternalSource = movie.video.includes(".mp4");
+  const { content } = location.state;
+  console.log(`this is content ${content}`);
+  const isExternalSource = content.video.includes(".mp4");
   console.log(isExternalSource);
 
   return (
@@ -19,9 +19,9 @@ export default function Watch() {
         </div>
       </Link>
       {isExternalSource ? (
-        <video className="video" autoPlay progress controls src={movie.video} />
+        <video className="video" autoPlay progress controls src={content.video} />
       ) : (
-        <iframe src={movie.video} frameborder="0" width="100%" height="100%" />
+        <iframe src={content.video} frameborder="0" width="100%" height="100%" />
       )}
     </div>
   );
